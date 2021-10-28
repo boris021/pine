@@ -1,5 +1,17 @@
-footer {
+.footer {
+	background: #246E3D;
+	padding: 22px 0;
 }
-//====================================================================================================
 
-//====================================================================================================
+.footer__body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer__text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 17px;
+	color: #FFFFFF;
+}
