@@ -749,8 +749,6 @@ body {
 	flex-wrap: wrap;
 }
 
-.about__card {}
-
 .about__item {
 	flex: 0 0 40%;
 	background: #FFFFFF;
@@ -770,7 +768,7 @@ body {
 	}
 
 	@media (max-width:$md2+px) {
-		flex: 0 0 100%;
+		flex: 0 1 100%;
 		margin: 0 20px;
 		align-items: center;
 		justify-content: center;
@@ -980,25 +978,33 @@ body {
 }
 
 .company__img-text {
+	flex: 0 0 100%;
 	background: #FFFFFF;
 	border-radius: 3px;
 	padding: 30px;
 	position: absolute;
-	bottom: 0;
-	left: 0;
 	right: 50px;
+	left: 0;
+	bottom: 0;
+	font-size: 14px;
+	line-height: 150%;
 
 	@media (max-width:$md2+px) {
-		width: 100%;
 		right: 0;
-		display: block;
+	}
+
+	@media (max-width:$md3+px) {
+		padding: 15px;
+		right: 0px;
+		width: 80%;
+	}
+
+	@media (max-width:$md4+px) {
+		width: 60%;
+		top: 100px;
 	}
 }
 
-.company__text {
-	font-size: 14px;
-	line-height: 150%;
-}
 
 
 // contact ===============================================================================

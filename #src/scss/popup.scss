@@ -10,6 +10,21 @@
 	height: 100%;
 	transition: visibility 0.8s ease 0s;
 	visibility: hidden;
+
+	&__forma {
+		padding: 25px;
+	}
+
+	&__title {
+		background: #246E3D;
+		color: #fff;
+		font-size: 24px;
+		font-weight: 600;
+		// margin-bottom: 20px;
+		padding: 20px;
+		text-align: center;
+	}
+
 	&::before {
 		content: "";
 		background-color: rgba(0, 0, 0, 0.9);
@@ -21,27 +36,34 @@
 		opacity: 0;
 		transition: opacity 0.8s ease 0s;
 	}
+
 	&.show {
 		visibility: visible;
 		overflow: auto;
+
 		&::before {
 			opacity: 1;
 		}
+
 		.popup__body {
 			transform: scale(1);
 		}
 	}
+
 	&._active {
 		overflow: auto;
 		visibility: visible;
+
 		&::before {
 			opacity: 1;
 		}
+
 		.popup__body {
 			transition: all 0.3s ease 0.2s;
 			transform: scale(1);
 		}
 	}
+
 	// .popup__content
 	&__content {
 		display: flex;
@@ -54,26 +76,32 @@
 		justify-content: center;
 		align-items: center;
 	}
+
 	// .popup__body
 	&__body {
+		position: relative;
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
 		background-color: #fff;
-		padding: 50px;
+		// padding: 50px;
 		width: 100%;
-		max-width: 800px;
+		max-width: 600px;
+		border-radius: 0px;
 	}
+
 	// .popup__close
 	&__close {
 		width: 15px;
 		height: 15px;
 		position: absolute;
-		top: 0px;
-		right: 0px;
+		top: 10px;
+		right: 10px;
 		cursor: pointer;
 		z-index: 30;
-		background: url("../img/icons/close.svg") 0 0 no-repeat;
+		color: #fff;
+		// background: url("../img/icons/close.svg") 0 0 no-repeat;
 	}
 }
+
 //====================================================================================================
 //====================================================================================================
