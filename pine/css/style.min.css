@@ -1107,8 +1107,8 @@ body._touch .menu__link {
 
 .to-up {
   position: fixed;
-  bottom: 24%;
-  right: 6%;
+  bottom: 29%;
+  right: 6.5%;
   display: none;
   z-index: 22;
   cursor: pointer;
@@ -1141,7 +1141,7 @@ body._touch .menu__link {
 .callback-phone {
   background: #00a0e3;
   border: 2px solid #00a0e3;
-  bottom: 15%;
+  bottom: 17%;
 }
 
 .callback-bt:hover i {
@@ -1637,8 +1637,6 @@ body._touch .menu__link {
   transition: all 0.3s ease 0s;
   margin-bottom: 30px;
   text-align: center;
-}
-.tovar__item:not(:last-child) {
   margin-right: 30px;
 }
 .tovar__item:hover {
@@ -1647,6 +1645,11 @@ body._touch .menu__link {
 @media (max-width: 1092px) {
   .tovar__item {
     justify-content: center;
+  }
+}
+@media (max-width: 425px) {
+  .tovar__item {
+    margin-right: 0;
   }
 }
 
