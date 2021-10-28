@@ -29,23 +29,19 @@
 
 .forma {
 	&__policy {
+		margin-top: 20px;
+		text-align: center;
 		font-weight: normal;
-		font-size: 13px;
-		color: rgba(60, 66, 185, 0.6);
+		font-size: 14px;
 		position: relative;
 		padding-left: 20px;
-
-		&::before {
-			content: '';
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 13px;
-			height: 13px;
-			margin-right: 10px;
-			background: url(../img/padlock.svg) 0 0 no-repeat;
-		}
+		line-height: 140%;
 	}
+}
+
+.text_policy {
+	color: $mainGreen;
+	text-decoration: underline;
 }
 
 //</FORM>====================================================================================================
@@ -223,6 +219,7 @@ textarea {
 }
 
 .input {
+	outline: none;
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
@@ -232,7 +229,7 @@ textarea {
 	transition: all 0.3s ease 0s;
 
 	&._focus {
-		background: #fff;
+		background: #246e3d26;
 	}
 
 	&._error {}
