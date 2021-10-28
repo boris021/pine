@@ -69,18 +69,7 @@ body {
 	padding: 0 15px;
 	margin: 0 auto;
 
-	@media (max-width: $md1 + px) {
-		max-width: 970px;
-	}
 
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-	}
-
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
-	}
 }
 
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -459,10 +448,14 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+
+	@media (max-width: 1182px) {
+		justify-content: center;
+	}
 }
 
 .sale__item {
-	flex: 0 1 32%;
+	flex: 0 0 32%;
 	background: linear-gradient(97.88deg, #188229 0.93%, #3DC953 99.28%);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
@@ -474,17 +467,17 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	transition: background-position 0.5s ease 0s;
+	margin-right: 15px;
 
 	&:hover {
 		background-position: 0px 163px;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 	}
 
-	@media (max-width:$md2+px) {
-		flex: 0 0 100%;
-		justify-content: center;
-		align-items: center;
-		align-self: center;
+	@media (max-width: 1182px) {
+		flex: 0 0 auto;
+		display: flex;
+		// margin-right: 0;
 	}
 }
 
@@ -754,18 +747,12 @@ body {
 	background: #FFFFFF;
 	border-radius: 5px;
 	padding: 25px;
-	// width: 440px;
 	margin: 0 50px;
 	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	transition: background 0.3s ease 0s;
-
-	&:hover {
-		background: $mainGreen;
-		color: $mainWhite;
-	}
 
 	@media (max-width:$md2+px) {
 		flex: 0 1 100%;
@@ -774,9 +761,14 @@ body {
 		justify-content: center;
 		margin-bottom: 20px;
 	}
+
+	&:hover {
+		background: $mainGreen;
+		color: $mainWhite;
+	}
 }
 
-.about__bg {
+.about__item .about__bg {
 	font-weight: bold;
 	font-size: 130px;
 	line-height: 152px;
@@ -801,6 +793,9 @@ body {
 	font-size: 16px;
 	line-height: 20px;
 }
+
+
+
 
 
 // cheer =============================================================================
