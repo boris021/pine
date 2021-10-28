@@ -58,7 +58,7 @@ body {
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
-	background-color: #FDFDFD;
+	background-color: #F6F6F6;
 }
 
 //</ОБОЛОЧКА>===========================================================================================================
@@ -108,8 +108,6 @@ body {
 .page__main {
 	padding: 0 0 0 0;
 	background-color: #E8EAE7;
-
-
 }
 
 .main__body {
@@ -310,7 +308,7 @@ body {
 
 // tovar =========================================================
 .tovar {
-	padding: 100px 0;
+	padding: 60px 0;
 }
 
 .tovar__body {
@@ -406,11 +404,8 @@ body {
 	border-radius: 10px;
 	padding: 25px;
 	transition: all 0.3s ease 0s;
+	margin-bottom: 30px;
 	text-align: center;
-
-	&:not(:last-child) {
-		margin-bottom: 30px;
-	}
 
 	&:hover {
 		box-shadow: 0px 0px 30px 5px rgba(0, 62, 119, 0.2);
@@ -477,10 +472,10 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	transition: all 0.3s ease 0s;
+	transition: background-position 0.5s ease 0s;
 
 	&:hover {
-		// background: linear-gradient(97.88deg, #3DC953 0.93%, #188229 99.28%);
+		background-position: 0px 163px;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
 	}
 
@@ -572,4 +567,147 @@ body {
 	height: 100%;
 	background: url(../img/sale-2-before.png) top left no-repeat;
 	z-index: 2;
+}
+
+.sale__item-3::after {
+	position: absolute;
+	content: '';
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/sale-3-after.png) top right no-repeat;
+	z-index: 2;
+}
+
+// pain ==================================================================================
+.pine {
+	padding: 80px 0;
+	position: relative;
+
+	@media (max-width:$md3+px) {
+		padding: 40px 0;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: $mainGreen;
+		transform: translate(-50%, 0);
+		z-index: 2;
+
+		@media (max-width:$md2+px) {
+			transform: translate(0, 0);
+		}
+	}
+}
+
+.pine__body {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 52px 0px 92px 0px;
+}
+
+.pine__block {
+	position: relative;
+	flex: 0 0 50%;
+	z-index: 3;
+
+	@media (max-width:$md2+px) {
+		flex: 0 1 100%;
+	}
+}
+
+.pine__title {
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 130%;
+	color: $mainWhite;
+	margin-bottom: 32px;
+}
+
+.pine__text {
+	font-weight: normal;
+	color: $mainWhite;
+	font-size: 17px;
+	line-height: 150%;
+	margin-right: 200px;
+
+	@media (max-width:$md2+px) {
+		// width: 800px;
+		margin-right: 0;
+	}
+}
+
+.pine-bg {
+	position: absolute;
+	content: '';
+	top: 40%;
+	left: 0;
+	z-index: 10;
+
+	@media (max-width:$md2+px) {
+		top: 20%;
+	}
+}
+
+.pine__photo {
+	flex: 0 0 50%;
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+
+	@media (max-width:$md2+px) {
+		flex: 0 1 100%;
+	}
+}
+
+.pain-img {
+	position: absolute;
+	content: '';
+	top: 110px;
+	left: -150px;
+	z-index: 5;
+
+	@media (max-width:1185px) {
+		left: -1px;
+	}
+
+	@media (max-width:$md2+px) {
+		left: 50px;
+		top: 50px;
+	}
+
+	@media (max-width:$md3+px) {
+		display: block;
+		margin: 0 auto;
+		width: 100%;
+		left: 0;
+	}
+}
+
+.pine__btn {
+	position: absolute;
+	content: '';
+	bottom: -20px;
+	right: 80px;
+
+	@media (max-width:$md2+px) {
+		bottom: 0;
+		top: 500px;
+		right: 0;
+		text-align: center;
+		margin: 0 auto;
+		position: relative;
+	}
+
+	@media (max-width:$md3+px) {
+		display: none;
+	}
 }
